@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SceW" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0BB-Sv-B05" userLabel="Camera View">
+                                <rect key="frame" x="0.0" y="101" width="414" height="637"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aC-hi-QJq">
+                                <rect key="frame" x="0.0" y="738" width="414" height="158"/>
+                                <color key="backgroundColor" red="1" green="0.78208931658161862" blue="0.26516834057215222" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Extract Text">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhotoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nnr-Bk-oq9"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cey-Rs-0bF" userLabel="View Finder">
+                                <rect key="frame" x="0.0" y="360" width="414" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.18461729161379806" green="0.37329280891081729" blue="0.60563239103367872" alpha="0.48407240316901406" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTr-NC-L3M">
+                                <rect key="frame" x="20" y="44" width="374" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FTr-NC-L3M" secondAttribute="height" multiplier="374:49" id="j7a-PH-nbC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="K0n-vT-cGq">
+                                <rect key="frame" x="18" y="709" width="378" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="CB3-eN-tGW"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVI-km-nvr">
+                                <rect key="frame" x="341" y="40" width="48" height="48"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="icons8-video-48">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qH2-xi-bnD" kind="presentation" id="yuA-Km-7VJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.24960907386678155" green="0.52042527453626919" blue="0.33512012979217903" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K0n-vT-cGq" secondAttribute="trailing" constant="20" id="9Gq-l7-XHb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XVI-km-nvr" secondAttribute="trailing" constant="25" id="CID-Xw-cG5"/>
+                            <constraint firstItem="6aC-hi-QJq" firstAttribute="top" secondItem="0BB-Sv-B05" secondAttribute="bottom" id="DNP-Vm-Qi4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0BB-Sv-B05" secondAttribute="bottom" constant="124" id="Dl6-wl-FEk"/>
+                            <constraint firstItem="FTr-NC-L3M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LMl-vS-aa6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K0n-vT-cGq" secondAttribute="bottom" constant="123" id="OJk-Qp-E8h"/>
+                            <constraint firstItem="6aC-hi-QJq" firstAttribute="trailing" secondItem="0BB-Sv-B05" secondAttribute="trailing" id="Oxv-15-rRe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FTr-NC-L3M" secondAttribute="trailing" constant="20" id="Ph7-E0-dSN"/>
+                            <constraint firstItem="0BB-Sv-B05" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WAV-Y9-1uh"/>
+                            <constraint firstItem="K0n-vT-cGq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YUd-O5-Fgf"/>
+                            <constraint firstItem="0BB-Sv-B05" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="auw-Xl-hxz"/>
+                            <constraint firstItem="6aC-hi-QJq" firstAttribute="leading" secondItem="0BB-Sv-B05" secondAttribute="leading" id="bcH-ja-9bw"/>
+                            <constraint firstItem="0BB-Sv-B05" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cns-BQ-CbX"/>
+                            <constraint firstItem="FTr-NC-L3M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dfp-a6-S1a"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="6aC-hi-QJq" secondAttribute="bottom" constant="-34" id="f0s-wS-VGb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FTr-NC-L3M" secondAttribute="bottom" constant="769" id="kTX-Wi-ulu"/>
+                            <constraint firstItem="XVI-km-nvr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="oSl-3R-sTN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="GO" destination="XVI-km-nvr" id="UHj-uV-m23"/>
+                        <outlet property="cameraView" destination="0BB-Sv-B05" id="ZeM-UO-8Az"/>
+                        <outlet property="newl" destination="FTr-NC-L3M" id="OC7-ll-cja"/>
+                        <outlet property="viewFinder" destination="cey-Rs-0bF" id="np1-Gm-DMg"/>
+                        <outlet property="zoomSlider" destination="K0n-vT-cGq" id="hnm-OQ-iNW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="FtV-iG-utx">
+            <objects>
+                <viewController id="qH2-xi-bnD" customClass="VideoViewController" customModule="SceW" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fdN-CI-T3A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPDATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtm-YE-5cE">
+                                <rect key="frame" x="71" y="50" width="272" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iH9-Hc-ueh">
+                                <rect key="frame" x="20" y="283" width="374" height="261"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wtm-YE-5cE" firstAttribute="leading" secondItem="sUl-JI-mMi" secondAttribute="leading" constant="71" id="0cx-sY-7HG"/>
+                            <constraint firstItem="sUl-JI-mMi" firstAttribute="trailing" secondItem="iH9-Hc-ueh" secondAttribute="trailing" constant="20" id="6KV-WX-U1y"/>
+                            <constraint firstItem="sUl-JI-mMi" firstAttribute="bottom" secondItem="iH9-Hc-ueh" secondAttribute="bottom" constant="264" id="7ty-Z4-do0"/>
+                            <constraint firstItem="iH9-Hc-ueh" firstAttribute="top" secondItem="sUl-JI-mMi" secondAttribute="top" constant="283" id="Ica-wt-4ov"/>
+                            <constraint firstItem="iH9-Hc-ueh" firstAttribute="leading" secondItem="sUl-JI-mMi" secondAttribute="leading" constant="20" id="aGM-6Q-Avt"/>
+                            <constraint firstItem="sUl-JI-mMi" firstAttribute="trailing" secondItem="wtm-YE-5cE" secondAttribute="trailing" constant="71" id="bVj-XC-Ugu"/>
+                            <constraint firstItem="wtm-YE-5cE" firstAttribute="top" secondItem="sUl-JI-mMi" secondAttribute="top" constant="50" id="zlH-6k-X4S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sUl-JI-mMi"/>
+                    </view>
+                    <connections>
+                        <outlet property="YT" destination="iH9-Hc-ueh" id="Kw3-Hd-kVN"/>
+                        <outlet property="checkLabel" destination="wtm-YE-5cE" id="A3v-mU-MEb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="38q-zd-NcF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169.5652173913045" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-video-48" width="48" height="48"/>
+    </resources>
+</document>
