@@ -23,11 +23,11 @@ You can clone this repository using command: ``https://github.com/iamvatsalpatel
 #### 3. Build the project and run it on iOS device.
 
 ## Implementation Video
-You can find the video of running application from [here]().
+You can find the video of running application from [here](https://github.com/iamvatsalpatel/CHARUSAT-SceW/blob/main/Implementation%20Video.mov).
 
 ## Note
 1. This application can run on iPhones having iOS version 10.0 or above and iPads having iPadOS version 13.0 or above. 
 2. The extracted text will be shown on the top of the image. You can zoom-in and out for scanning the text using the slider in the app.
 
 ## Facing any issues???
-Feel free to [open an issue](https://github.com/iamvatsalpatel/Textlytic/issues/new?assignees=&labels=Query&title=Query). I'll be glad to help you. 😁
+Feel free to [open an issue](https://github.com/iamvatsalpatel/CHARUSAT-SceW/issues/new?assignees=&labels=Query&title=Query). I'll be glad to help you. 😁
