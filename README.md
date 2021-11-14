@@ -18,7 +18,7 @@ Libraries used in this project are as follows:
 #### 1. Clone the repository
 You can clone this repository using command: ``https://github.com/iamvatsalpatel/CHARUSAT-SceW.git``
 
-#### 2. Open ``SceW.xcodeproj``
+#### 2. Unzip ``SceW.xcodeproj.zip`` and then open it.
 
 #### 3. Build the project and run it on iOS device.
 
